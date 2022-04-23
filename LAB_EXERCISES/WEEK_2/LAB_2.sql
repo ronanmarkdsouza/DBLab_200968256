@@ -1,0 +1,147 @@
+/*
+                                            WEEK-2:
+*/
+-- 2.0: EMP Table data:
+INSERT INTO EMP values(107, 'RONAN','BTECH','+91-8088520782','ronan@digisol.com','DEVELOPER',270374,null);
+INSERT INTO EMP values(100,'RAJESH','BTECH','+91-9214155930','rajesh@digisol.com','DEVELOPER',163427,null);
+INSERT INTO EMP values(101, 'RAVI','MTECH','+81-9848194078','ravi@digisol.com','PROJECT LEADER',187978,null);
+INSERT INTO EMP values(102, 'VIJAY','BTECH','+91-9199014622','vijay@digisol.com','PROJECT MANAGER',267665,null);
+INSERT INTO EMP values(108, 'AJAY','BTECH','+31-7057516909','ajay@digisol.com','TECHNICAL HEAD',211685,null);
+INSERT INTO EMP values(110, 'BHASKAR','MTECH','+48-8967526759','bhaskar@digisol.com','PROJECT DIRECTOR',165377,null);
+INSERT INTO EMP values(106, 'RAJ','MSC','+81-8273333909','raj@digisol.com','PROJECT LEADER',119085,null);
+INSERT INTO EMP values(105, 'MANISH','MCA','+44-7230633888','manish@digisol.com','DEVELOPER',236267,null);
+INSERT INTO EMP values(111, 'PRASAD','PHD','+48-9602147804','prasad@digisol.com','CEO',230721,null);
+INSERT INTO EMP values(116, 'RAKESH','MTECH','+91-9758970741','rakesh@digisol.com','DEVELOPER',169144,null);
+INSERT INTO EMP values(112, 'RAKESH','MTECH','+48-9961048217','rakesh1@digisol.com','DEVELOPER',129649,null);
+INSERT INTO EMP values(113, 'RAJAN','MCA','+81-8709727399','rajan@digisol.com','PROJECT LEADER',129032,null);
+INSERT INTO EMP values(114, 'MILANA','MTECH','+91-9538011262','milana@digisol.com','DEVELOPER',236691,null);
+INSERT INTO EMP values(115, 'ASHWIN','BTECH','+81-8791273721','raj1@digisol.com','DEVELOPER',104205,null);
+
+UPDATE EMP SET REPORTS_TO=108 WHERE EMPCODE=107;
+UPDATE EMP SET REPORTS_TO=101 WHERE EMPCODE=100;
+UPDATE EMP SET REPORTS_TO=102 WHERE EMPCODE=101;
+UPDATE EMP SET REPORTS_TO=110 WHERE EMPCODE=102;
+UPDATE EMP SET REPORTS_TO=102 WHERE EMPCODE=108;
+UPDATE EMP SET REPORTS_TO=106 WHERE EMPCODE=110;
+UPDATE EMP SET REPORTS_TO=110 WHERE EMPCODE=106;
+UPDATE EMP SET REPORTS_TO=106 WHERE EMPCODE=105;
+
+-- 2.5: PRJ_DETAILS Table data:
+INSERT INTO PRJ_DETAILS values('P1','SPYDER',TO_DATE('10-01-2020','DD-MM-YYYY'),TO_DATE('11-OCT-2022','DD-MON-YYYY'),null,102,2000000,1990000);
+INSERT INTO PRJ_DETAILS values('P2','APOLLO',TO_DATE('01-01-2019','DD-MM-YYYY'),TO_DATE('10-JUL-2021','DD-MON-YYYY'),TO_DATE('12-12-2022','DD-MM-YYYY'),108,3000000,3600000);
+INSERT INTO PRJ_DETAILS values('P3','UNICORN',TO_DATE('03-09-2021','DD-MM-YYYY'),TO_DATE('10-OCT-2023','DD-MON-YYYY'),null,106,7500000,8000000);
+INSERT INTO PRJ_DETAILS values('P4','ZEUS',TO_DATE('28-02-2020','DD-MM-YYYY'),TO_DATE('09-JUN-2021','DD-MON-YYYY'),TO_DATE('10-01-2022','DD-MM-YYYY'),110,5500000,5000000);
+INSERT INTO PRJ_DETAILS values('P5','JUPITOR',TO_DATE('07-08-2018','DD-MM-YYYY'),TO_DATE('04-FEB-2020','DD-MON-YYYY'),TO_DATE('01-NOV-2020','DD-MON-YYYY'),110,9000000,9000000);
+INSERT INTO PRJ_DETAILS values('P6','MARS',TO_DATE('21-02-2022','DD-MM-YYYY'),TO_DATE('07-AUG-2024','DD-MON-YYYY'),TO_DATE('17-SEP-2025','DD-MON-YYYY'),110,4500000,3500000);
+INSERT INTO PRJ_DETAILS values('P8','XXX',TO_DATE('07-04-2020','DD-MM-YYYY'),TO_DATE('12-OCT-2022','DD-MON-YYYY'),null,107,9800000,8700000);
+INSERT INTO PRJ_DETAILS values('P7','ENIGMA',TO_DATE('10-03-2022','DD-MM-YYYY'),TO_DATE('07-APR-2024','DD-MON-YYYY'),null,113,4500000,2950000);
+
+-- 2.1: SKILL Table data:
+INSERT INTO SKILL values('S1','Full Stack');
+INSERT INTO SKILL values('S2','Python');
+INSERT INTO SKILL values('S3','Java');
+INSERT INTO SKILL values('S4','C++');
+INSERT INTO SKILL values('S6','Oracle');
+INSERT INTO SKILL values('S7','Android');
+INSERT INTO SKILL values('S8','AZURE');
+INSERT INTO SKILL values('S9','DOTNET');
+INSERT INTO SKILL values('S10','IOS');
+
+--2.2: CLIENT Table data:
+INSERT INTO CLIENT values('C1','ABC','+48-87489389','aaa@abc.com');
+INSERT INTO CLIENT values('C2','LTS','+91-78389397','bbb@lts.com');
+INSERT INTO CLIENT values('C3','RK','+44-67838934','ccc@rk.com');
+INSERT INTO CLIENT values('C4','MMA','+31-77839093','ddd@mma.com');
+INSERT INTO CLIENT values('C5','AKS','+81-66822903','eee@aks.com');
+INSERT INTO CLIENT values('C6','GKS','+91-75628982','fff@gks.com');
+INSERT INTO CLIENT values('C7','B'||'&'||'B','+91-64839839','ggg@bb.com');
+INSERT INTO CLIENT values('C8','ABT','+81-67554667','hhh@abt.com');
+INSERT INTO CLIENT values('C9','XYZ','+91-8975176172','xyz@ab.com');
+
+--2.3: EMP_SKILL Table data:
+INSERT INTO EMP_SKILL values(100,'S1',15);
+INSERT INTO EMP_SKILL values(100,'S3',10);
+INSERT INTO EMP_SKILL values(101,'S1',6);
+INSERT INTO EMP_SKILL values(101,'S2',10);
+INSERT INTO EMP_SKILL values(102,'S4',18);
+INSERT INTO EMP_SKILL values(110,'S1',14);
+INSERT INTO EMP_SKILL values(110,'S6',20);
+INSERT INTO EMP_SKILL values(106,'S2',10);
+INSERT INTO EMP_SKILL values(106,'S6',12);
+INSERT INTO EMP_SKILL values(106,'S8',10);
+INSERT INTO EMP_SKILL values(108,'S9',5);
+INSERT INTO EMP_SKILL values(108,'S6',18);
+INSERT INTO EMP_SKILL values(105,'S7',12);
+INSERT INTO EMP_SKILL values(105,'S10',11);
+INSERT INTO EMP_SKILL values(101,'S3',7);
+
+--2.4: WORK_EXP Table data:
+INSERT INTO WORK_EXP values(100,'P1',20,'C1','A');
+INSERT INTO WORK_EXP values(100,'P3',15,'C3','A');
+INSERT INTO WORK_EXP values(101,'P1',16,'C1','A');
+INSERT INTO WORK_EXP values(102,'P2',18,'C2','B');
+INSERT INTO WORK_EXP values(102,'P1',18,'C1','A');
+INSERT INTO WORK_EXP values(108,'P2',12,'C2','C');
+INSERT INTO WORK_EXP values(106,'P3',20,'C3','C');
+INSERT INTO WORK_EXP values(106,'P4',10,'C4','C');
+INSERT INTO WORK_EXP values(106,'P2',19,'C2','B');
+INSERT INTO WORK_EXP values(110,'P4',12,'C4','B');
+INSERT INTO WORK_EXP values(110,'P5',16,'C8','A');
+INSERT INTO WORK_EXP values(105,'P5',5,'C5','C');
+INSERT INTO WORK_EXP values(111,'P5',5,'C5','C');
+
+-- 2.6: MEDICAL_POLICY Table data:
+INSERT INTO MEDICAL_POLICY values(100,'MED001',10000,TO_DATE('10-12-2020','DD-MM-YYYY'));
+INSERT INTO MEDICAL_POLICY values(101,'MED003',12000,TO_DATE('15-12-2020','DD-MM-YYYY'));
+INSERT INTO MEDICAL_POLICY values(100,'MED001',10000,TO_DATE('10-01-2021','DD-MM-YYYY'));
+INSERT INTO MEDICAL_POLICY values(101,'MED003',12000,TO_DATE('15-01-2021','DD-MM-YYYY'));
+INSERT INTO MEDICAL_POLICY values(113,'MED004',9000,TO_DATE('21-01-2021','DD-MM-YYYY'));
+
+-- 2.7: FAMILY_DEPENDENTS Table data:
+INSERT INTO FAMILY_DEPENDENTS values(100,'AJITH','SON',12);
+INSERT INTO FAMILY_DEPENDENTS values(100,'PRITHVI','DAUGHTER',9);
+INSERT INTO FAMILY_DEPENDENTS values(101,'AARYA','DAUGHTER',17);
+INSERT INTO FAMILY_DEPENDENTS values(101,'AKANKSH','SON',11);
+INSERT INTO FAMILY_DEPENDENTS values(101,'ANITA','SPOUSE',43);
+
+-- 2.8: PAY_CHECK Table data:
+INSERT INTO PAY_CHECK values(100,TO_DATE('01-12-2020','DD-MM-YYYY'),2000,null,null,null,2500,5000);
+INSERT INTO PAY_CHECK values(101,TO_DATE('01-12-2020','DD-MM-YYYY'),3000,null,null,null,5000,7000);
+INSERT INTO PAY_CHECK values(102,TO_DATE('01-12-2020','DD-MM-YYYY'),3000,null,null,null,3600,7000);
+INSERT INTO PAY_CHECK values(100,TO_DATE('01-01-2021','DD-MM-YYYY'),3000,null,null,null,450,4000);
+INSERT INTO PAY_CHECK values(101,TO_DATE('01-01-2021','DD-MM-YYYY'),5000,null,null,null,2100,4000);
+INSERT INTO PAY_CHECK values(102,TO_DATE('01-01-2021','DD-MM-YYYY'),5000,null,null,null,null,9000);
+INSERT INTO PAY_CHECK values(108,TO_DATE('02-01-2021','DD-MM-YYYY'),7000,null,null,null,900,3000);
+
+-- 2.9: Run COMMIT command. Delete the employee having empcode 100 and confirm the result with justification.
+COMMIT;
+-- Delete FROM EMP WHERE EMPCODE=100; This references other tables
+-- ORA-02292: integrity constraint (DSE064.FK_EMPNO) violated - child record found
+
+-- 2.10: Update email of employee with EMPCODE 100 to rajesh@digital.com and confirm the result with justification.
+-- Update EMP set email='rajesh@digital.com' WHERE EMPCODE=100; This returns a violation
+--ORA-02290: check constraint (DSE064.EMAIL_DOMAIN) violated
+
+--2.11: Update WORK_EXP by changing ProjId of employee 111 to P9 and confirm the result with reason.
+-- Update WORK_EXP set PRJID='P9' WHERE EMPCODE=111; This returns a violation
+-- ORA-02291: integrity constraint (DSE064.SYS_C0026577) violated - parent key not found
+
+--2.12: Run  COMMIT  command.  Delete  the  client  information  from  CLIENT  table having ClientID C1. Confirm the result with reason.
+COMMIT;
+Delete FROM CLIENT WHERE CLIENTID='C1';
+
+--2.13: Run COMMIT command.  Delete a family dependent information belonging to employee  with  employee  id  100.  Confirm  the  result.  If  records  get  deleted,  run ROLLBACK to restore records back.
+COMMIT;
+Delete FROM FAMILY_DEPENDENTS WHERE EMPNO=100;
+ROLLBACK;
+
+--2.14: Update the EMP table to increase salary of DEVELOPERS by 1%.  
+Update EMP set Salary = 1.01*Salary WHERE Designation='DEVELOPER';
+
+--2.15: Update employee code to which 108 Reports to as 106.
+Update EMP set REPORTS_TO=106 WHERE EMPCODE=108;
+
+--2.16: Update employee code to which 108 Reports to as 117. Confirm the result with reason. Type COMMIT; 
+-- Update EMP set REPORTS_TO=117 WHERE EMPCODE=108; This returns a violation
+-- ORA-02291: integrity constraint (DSE064.FK_REPORTS) violated - parent key not found
+COMMIT;
